@@ -7,10 +7,14 @@
   "main": "acrobot.js",
   "dependencies": {
     "botkit": "latest",
-    "entities": "latest"
+    "entities": "latest",
+    "snyk": "^1.69.7"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  }
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
